@@ -5,144 +5,9 @@
 <head>
     <title>The Protecting Elections Toolkit</title>
     <meta charset="UTF-8" />
-    <style>
-        @import url("https://www.idea.int/sites/all/themes/idea/css/custom.css?ru0t0c");
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="./script.js"></script>
 
-        .header {
-            width: 100%;
-        }
-
-        a {
-            color: black;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .data {
-            height: 500px;
-            overflow: scroll;
-            display: block;
-        }
-
-        td {
-            border: 1px solid #aaaaaa;
-            border-collapse: collapse;
-            padding: 5px;
-            text-align: center;
-        }
-
-        .control {
-            padding: 5px;
-        }
-
-        .control-panel {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .control-panel label {
-            margin-right: 5px;
-        }
-
-        .control-panel .checkbox-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-
-        .control-panel .checkbox-group label {
-            white-space: nowrap;
-        }
-
-        .control-panel input[type="text"],
-        .control-panel select {
-            padding: 5px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-
-        .control-panel input[type="checkbox"] {
-            transform: scale(1.2);
-        }
-
-        .control-panel button {
-            padding: 5px 10px;
-            border-radius: 4px;
-            background-color: #4caf50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        thead th {
-            position: sticky;
-            top: 0;
-            background-color: #efeff0;
-
-        }
-    </style>
-
-    <script>
-        const inputs = [
-            { id: "searchTitle", className: "title", checkbox: false },
-            { id: "searchAuthor", className: "author", checkbox: false },
-            { id: "selectChallenge", className: "challenge", checkbox: false },
-            { id: "selectType", className: "type", checkbox: false },
-            { id: "checkPrevention", className: "prevention", checkbox: true },
-            { id: "checkResilience", className: "resilience", checkbox: true },
-            { id: "checkRecovery", className: "recovery", checkbox: true },
-            { id: "checkGender", className: "gender", checkbox: true },
-            { id: "checkLegal", className: "legal", checkbox: true },
-            {
-                id: "checkInstitutional",
-                className: "institutional",
-                checkbox: true,
-            },
-            { id: "checkManagement", className: "management", checkbox: true },
-        ];
-
-        function filter(colName, matchingText) {
-            let table, tr, td, i;
-            table = document.getElementById("table");
-            tr = table.getElementsByTagName("tr");
-            for (i = 1; i < tr.length; i++) {
-                tr[i].style.display = "";
-
-                for (k = 0; k < inputs.length; k++) {
-                    const inputData = inputs[k];
-                    const input = document.getElementById(inputData.id);
-                    let inputText = input.value;
-
-                    if (inputData.checkbox) {
-                        if (!input.checked) {
-                            continue;
-                        }
-                        inputText = "✅";
-                    }
-
-                    const td = tr[i].getElementsByClassName(inputData.className)[0];
-                    const tdText = td.textContent || td.innerText;
-                    if (!tdText.toUpperCase().includes(inputText.toUpperCase())) {
-                        tr[i].style.display = "none";
-                    }
-                }
-            }
-        }
-        document.addEventListener("keypress", function (event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                filter()
-            }
-        });
-
-    </script>
 </head>
 
 <body>
@@ -184,7 +49,7 @@
         Protecting Elections, funded by the Government of Canada. For feedback or
         questions, please contact International IDEA via:
         <a href="mailto:protecting.election@idea.int">
-            protecting.election@idea.int </a>.
+            protecting.election@idea.int</a>.
     </p>
     <div class="control-panel">
         <div class="control">
@@ -298,6 +163,27 @@
 
             <tr>
                 <td class="title">
+                    <a href="https://www.tandfonline.com/doi/abs/10.1080/19392206.2021.2009655"
+                        target="_blank">Democracy and elections amid the COVID 19 pandemic: The case of
+                        Burundi<i class="fa fa-external-link"></i></a>
+                </td>
+                <td class="author">
+                    Ayandele, O., Agwanda, B., Amankwa, M. O., Dagba, G., and Nyadera,
+                    (2021)
+                </td>
+                <td class="challenge">Disasters</td>
+                <td class="type">Knowledge</td>
+                <td class="prevention">&#10060;</td>
+                <td class="resilience">&#10060;</td>
+                <td class="recovery">&#10060;</td>
+                <td class="gender">&#10060;</td>
+                <td class="legal">&#9989;</td>
+                <td class="institutional">&#9989;</td>
+                <td class="management">&#9989;</td>
+            </tr>
+
+            <tr>
+                <td class="title">
                     <a href="https://www.ndi.org/Democracy_and_the_Challenge_of_Change" target="_blank">Democracy and
                         the Challenge of Change: A Guide to Increasing
                         Women’s Political Participation <i class="fa fa-external-link"></i></a>
@@ -367,27 +253,6 @@
                 <td class="legal">&#10060;</td>
                 <td class="institutional">&#10060;</td>
                 <td class="management">&#10060;</td>
-            </tr>
-
-            <tr>
-                <td class="title">
-                    <a href="https://www.tandfonline.com/doi/abs/10.1080/19392206.2021.2009655"
-                        target="_blank">Democracy and elections amid the COVID 19 pandemic: The case of
-                        Burundi<i class="fa fa-external-link"></i></a>
-                </td>
-                <td class="author">
-                    Ayandele, O., Agwanda, B., Amankwa, M. O., Dagba, G., and Nyadera,
-                    (2021)
-                </td>
-                <td class="challenge">Disasters</td>
-                <td class="type">Knowledge</td>
-                <td class="prevention">&#10060;</td>
-                <td class="resilience">&#10060;</td>
-                <td class="recovery">&#10060;</td>
-                <td class="gender">&#10060;</td>
-                <td class="legal">&#9989;</td>
-                <td class="institutional">&#9989;</td>
-                <td class="management">&#9989;</td>
             </tr>
 
             <tr>

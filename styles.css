@@ -1,0 +1,80 @@
+@import url("https://www.idea.int/sites/all/themes/idea/css/custom.css?ru0t0c");
+
+.header {
+  width: 100%;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.data {
+  height: 500px;
+  overflow: scroll;
+  display: block;
+}
+
+td {
+  border: 1px solid #aaaaaa;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: center;
+}
+
+.control {
+  padding: 5px;
+}
+
+.control-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.control-panel label {
+  margin-right: 5px;
+}
+
+.control-panel .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.control-panel .checkbox-group label {
+  white-space: nowrap;
+}
+
+.control-panel input[type="text"],
+.control-panel select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.control-panel input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+.control-panel button {
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #efeff0;
+}
