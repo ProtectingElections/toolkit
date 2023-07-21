@@ -42,4 +42,8 @@ The categories of prevention, resilience, recovery, gender, legal, institutional
 
 ## Editing introductory text
 
-Introductory text appears towards the top of the index.html file. Text can be edited directly. New paragraphs can be added by adding text between an opening and closing paragraph tag: `<p>` and `</p>`.
+Introductory text appears towards the top of the index.html file. Text can be edited directly.
+
+New paragraphs can be added by adding text between an opening and closing paragraph tag: `<p>` and `</p>`.
+
+Links take the format `<a href="https://www.idea.int/our-work/what-we-do/elections" target="_blank">Protecting Elections</a>`. `https://www.idea.int/our-work/what-we-do/elections` is the url and `Protecting Elections` is the clickable text. If `target="_blank"` is included, the link will open in a new tab.
