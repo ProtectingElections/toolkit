@@ -1,7 +1,12 @@
 @import url("https://www.idea.int/sites/all/themes/idea/css/custom.css?ru0t0c");
 
-.header {
-  width: 100%;
+.logo-idea {
+  float: left;
+  width: 60%;
+}
+
+.banners img {
+  height: 200px;
 }
 
 a {
