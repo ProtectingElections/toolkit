@@ -38,7 +38,22 @@ Here is an example of a table item:
     </tr>
 
 The categories of prevention, resilience, recovery, gender, legal, institutional, and management are all "yes/no" columns, and use icons to indicate their value. `&#9989;` shows a green checkmark (&#9989;), and `&#10060;` shows a red x (&#10060;)
-.
+
+### Excel Formula
+
+    ="<tr>
+        <td class='title' style='width:50' ;'><a href='"&L2&"' target='_blank'>"&B2&"<i class='fa fa-external link'></i></a>
+        </td>
+        <td class='author'>"&C2&"</td>
+        <td class='challenge'>"&C2&"</td>
+        <td class='type'>"&E2&"</td>
+        <td class='prevention'>"&IF(E2="Yes","✅","❌")&"</td>
+        <td class='resilience'>"&IF(F2="Yes","✅","❌")&"</td>
+        <td class='recovery'>"&IF(G2="Yes","✅","❌")&"</td>
+        <td class='gender'>"&IF(H2="Yes","✅","❌")&"</td>
+        <td class='legal'>"&IF(E2="Yes","✅","❌")&"</td>
+        <td class='institutional'>"&IF(E2="Yes","✅","❌")&"</td>
+        <td class='management'>"&IF(E2="Yes","✅","❌")&"</td></tr>"
 
 ## Editing introductory text
 
