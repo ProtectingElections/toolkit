@@ -6,6 +6,8 @@ This page was originally planned to fit in the body of a "Basic page" on the IDE
 
 The number of columns made the table too wide to embed, so it was suggested that the toolkit be put on a separate page. It should be straightforward for a website administrator to upload these files directly. However, idea.int is undergoing a remodel while this toolkit is being created, so the files were stored here for now.
 
+The filtering code is not especially sophisticated, but it gets the job done. When the filter button is clicked, or <Enter> is pressed, a loop runs though all rows, and hides items (by turning the css `display` style to `none`) that do not match any of the searched-for values.
+
 ### Github
 
 Github is convenient for two reasons:
@@ -54,19 +56,30 @@ The categories of prevention, resilience, recovery, gender, legal, institutional
 
 #### Fields and their Data Types
 
-| Field         | Possible Data Values                                                                                                                        |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Title         | Free text                                                                                                                                   |
-| Author        | Free text                                                                                                                                   |
-| Challenge     | {Autocratization, Disasters, Lack of Trust, Malfunctions, Malicious Online Actions, Malpractices, Marginalization, Violence, Uncategorized} |
-| Type          | {Assessment, Knowledge, Training}                                                                                                           |
-| Prevention    | {✅, ❌}                                                                                                                                    |
-| Resilience    | {✅, ❌}                                                                                                                                    |
-| Recovery      | {✅, ❌}                                                                                                                                    |
-| Gender        | {✅, ❌}                                                                                                                                    |
-| Legal         | {✅, ❌}                                                                                                                                    |
-| Institutional | {✅, ❌}                                                                                                                                    |
-| Management    | {✅, ❌}                                                                                                                                    |
+| Field                 | Possible Data Values                                                                                                                        |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title                 | Free text                                                                                                                                   |
+| Author                | Free text                                                                                                                                   |
+| Challenge             | {Autocratization, Disasters, Lack of Trust, Malfunctions, Malicious Online Actions, Malpractices, Marginalization, Violence, Uncategorized} |
+| Type (aka "Capacity") | {Assessment, Knowledge, Training}                                                                                                           |
+| Prevention            | {✅, ❌}                                                                                                                                    |
+| Resilience            | {✅, ❌}                                                                                                                                    |
+| Recovery              | {✅, ❌}                                                                                                                                    |
+| Gender                | {✅, ❌}                                                                                                                                    |
+| Legal                 | {✅, ❌}                                                                                                                                    |
+| Institutional         | {✅, ❌}                                                                                                                                    |
+| Management            | {✅, ❌}                                                                                                                                    |
+
+Adding a new value to `challenge` or `type` is straightforward. A new `<option>` needs to be added to the relevant group at the top of index.html, in the form:
+
+    <option value="marginalization">Marginalization</option>
+
+Replace `"marginalization"` and `Marginalization` with your value. The first one, lowercase and in quotes, should match what is in the spreadsheet. The second value is what users will see.
+
+Make sure that you are putting new challenge values in the challenge and not the type group, and vice versa. I placed comments in the file to flag where this should happen:
+
+    <!-- ADD NEW CHALLENGE VALUES HERE -->
+    <!-- ADD NEW CAPACITY VALUES HERE -->
 
 ### Excel Formula
 

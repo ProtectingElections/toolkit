@@ -16,6 +16,8 @@ function filter(colName, matchingText) {
     let table, tr, td, i;
     table = document.getElementById("table");
     tr = table.getElementsByTagName("tr");
+    let numHidden = 0;
+    document.getElementById("empty").style.display = "none";
     for (i = 1; i < tr.length; i++) {
         tr[i].style.display = "";
 
@@ -35,8 +37,12 @@ function filter(colName, matchingText) {
             const tdText = td.textContent || td.innerText;
             if (!tdText.toUpperCase().includes(inputText.toUpperCase())) {
                 tr[i].style.display = "none";
+                numHidden++;
             }
         }
+    }
+    if (numHidden >= tr.length - 1) {
+        document.getElementById("empty").style.display = "";
     }
 }
 document.addEventListener("keypress", function (event) {
