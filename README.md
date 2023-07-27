@@ -15,7 +15,20 @@ Github is convenient for two reasons:
 
 ## Management
 
-### Adding resources
+## Editing introductory text
+
+Introductory text appears towards the top of the index.html file. Text can be edited directly.
+
+New paragraphs can be added by adding text between an opening and closing paragraph tag: `<p>` and `</p>`.
+
+Links take the format:
+
+    <a href="https://www.idea.int/our-work/what-we-do/elections" target="_blank">Protecting Elections</a>
+    <a href="https://www.idea.int/our-work/what-we-do/elections">Protecting Elections</a>
+
+`https://www.idea.int/our-work/what-we-do/elections` is the url and `Protecting Elections` is the clickable text. If `target="_blank"` is included, the link will open in a new tab.
+
+### Table Items
 
 Here is an example of a table item:
 
@@ -28,18 +41,36 @@ Here is an example of a table item:
         <td class="author">Kofi Annan Foundation</td>
         <td class="challenge">Autocratization</td>
         <td class="type">Knowledge</td>
-        <td class="prevention">&#9989;</td>
-        <td class="resilience">&#10060;</td>
-        <td class="recovery">&#10060;</td>
-        <td class="gender">&#10060;</td>
-        <td class="legal">&#9989;</td>
-        <td class="institutional">&#10060;</td>
-        <td class="management">&#10060;</td>
+        <td class="prevention">✅</td>
+        <td class="resilience">❌</td>
+        <td class="recovery">❌</td>
+        <td class="gender">❌</td>
+        <td class="legal">✅</td>
+        <td class="institutional">❌</td>
+        <td class="management">❌</td>
     </tr>
 
-The categories of prevention, resilience, recovery, gender, legal, institutional, and management are all "yes/no" columns, and use icons to indicate their value. `&#9989;` shows a green checkmark (&#9989;), and `&#10060;` shows a red x (&#10060;)
+The categories of prevention, resilience, recovery, gender, legal, institutional, and management are all "yes/no" columns, and use icons to indicate their value. The UTF-8 values are `&#9989;` for ✅ and `&#10060;` for ❌.
+
+#### Fields and their Data Types
+
+| Field         | Possible Data Values                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title         | Free text                                                                                                                                   |
+| Author        | Free text                                                                                                                                   |
+| Challenge     | {Autocratization, Disasters, Lack of Trust, Malfunctions, Malicious Online Actions, Malpractices, Marginalization, Violence, Uncategorized} |
+| Type          | {Assessment, Knowledge, Training}                                                                                                           |
+| Prevention    | {✅, ❌}                                                                                                                                    |
+| Resilience    | {✅, ❌}                                                                                                                                    |
+| Recovery      | {✅, ❌}                                                                                                                                    |
+| Gender        | {✅, ❌}                                                                                                                                    |
+| Legal         | {✅, ❌}                                                                                                                                    |
+| Institutional | {✅, ❌}                                                                                                                                    |
+| Management    | {✅, ❌}                                                                                                                                    |
 
 ### Excel Formula
+
+The following formula can be used in Excel or Google Sheets to automatically generate HTML for all resources.
 
     ="<tr>
         <td class='title' style='width:50' ;'><a href='"&L2&"' target='_blank'>"&B2&"<i class='fa fa-external link'></i></a>
@@ -55,10 +86,16 @@ The categories of prevention, resilience, recovery, gender, legal, institutional
         <td class='institutional'>"&IF(E2="Yes","✅","❌")&"</td>
         <td class='management'>"&IF(E2="Yes","✅","❌")&"</td></tr>"
 
-## Editing introductory text
+### Adding Resources
 
-Introductory text appears towards the top of the index.html file. Text can be edited directly.
+All table items should be pasted from the excel formula column into the index.html file, replacing the current contents, between the `<tbody>` and `</tbody>` tags. (Note that `<tdbody>` is different from `<body>`.) There are also two comments marking this location:
 
-New paragraphs can be added by adding text between an opening and closing paragraph tag: `<p>` and `</p>`.
+                    <!-- !!!!!!!!!!!!!!!!!!!!!
+    START COPY PASTE BELOW HERE
+    !!!!!!!!!!!!!!!!!!!!! -->
 
-Links take the format `<a href="https://www.idea.int/our-work/what-we-do/elections" target="_blank">Protecting Elections</a>`. `https://www.idea.int/our-work/what-we-do/elections` is the url and `Protecting Elections` is the clickable text. If `target="_blank"` is included, the link will open in a new tab.
+and
+
+                    <!-- !!!!!!!!!!!!!!!!!!!!!
+    END COPY PASTE ABOVE HERE
+    !!!!!!!!!!!!!!!!!!!!! -->

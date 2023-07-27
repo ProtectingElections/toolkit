@@ -8,11 +8,7 @@ const inputs = [
     { id: "checkRecovery", className: "recovery", checkbox: true },
     { id: "checkGender", className: "gender", checkbox: true },
     { id: "checkLegal", className: "legal", checkbox: true },
-    {
-        id: "checkInstitutional",
-        className: "institutional",
-        checkbox: true,
-    },
+    { id: "checkInstitutional", className: "institutional", checkbox: true },
     { id: "checkManagement", className: "management", checkbox: true },
 ];
 
