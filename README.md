@@ -2,7 +2,7 @@
 
 ## Development
 
-This page was originally planned to fit in the body of a "Basic page" on the IDEA website, which can contain HTML code. For this reason, it was kept as simple as possible. I.e., a single static HTML page, as little javascript as possible, and styled to match the rest of IDEA's website. (The page directly imports a CSS file from IDEA.)
+This page was originally planned to fit in the body of a "Basic page" on the IDEA website, which can contain HTML code. For this reason, it was kept as simple as possible. I.e., a single static HTML page, as little javascript as possible, and styled to match the rest of IDEA's website. (The page directly imports a CSS file from IDEA.) For convenience, since switching to Github I have separated out the script and style sections to their own files, as well as added an assets folder for the logo images. This can be condensed back into a single page if needed.
 
 The number of columns made the table too wide to embed, so it was suggested that the toolkit be put on a separate page. It should be straightforward for a website administrator to upload these files directly. However, idea.int is undergoing a remodel while this toolkit is being created, so the files were stored here for now.
 
