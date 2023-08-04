@@ -2,7 +2,7 @@ const inputs = [
   { id: "searchTitle", className: "title", checkbox: false },
   { id: "searchAuthor", className: "author", checkbox: false },
   { id: "selectChallenge", className: "challenge", checkbox: false },
-  { id: "selectType", className: "type", checkbox: false },
+  { id: "selectCapacity", className: "capacity", checkbox: false },
   { id: "checkPrevention", className: "prevention", checkbox: true },
   { id: "checkResilience", className: "resilience", checkbox: true },
   { id: "checkRecovery", className: "recovery", checkbox: true },

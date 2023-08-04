@@ -42,7 +42,7 @@ Here is an example of a table item:
             class="fa fa-external-link"></i></a></td>
         <td class="author">Kofi Annan Foundation</td>
         <td class="challenge">Autocratization</td>
-        <td class="type">Knowledge</td>
+        <td class="capacity">Knowledge</td>
         <td class="prevention">✅</td>
         <td class="resilience">❌</td>
         <td class="recovery">❌</td>
@@ -56,21 +56,21 @@ The categories of prevention, resilience, recovery, gender, legal, institutional
 
 #### Fields and their Data Types
 
-| Field                 | Possible Data Values                                                                                                                        |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Title                 | Free text                                                                                                                                   |
-| Author                | Free text                                                                                                                                   |
-| Challenge             | {Autocratization, Disasters, Lack of Trust, Malfunctions, Malicious Online Actions, Malpractices, Marginalization, Violence, Uncategorized} |
-| Type (aka "Capacity") | {Assessment, Knowledge, Training}                                                                                                           |
-| Prevention            | {✅, ❌}                                                                                                                                    |
-| Resilience            | {✅, ❌}                                                                                                                                    |
-| Recovery              | {✅, ❌}                                                                                                                                    |
-| Gender                | {✅, ❌}                                                                                                                                    |
-| Legal                 | {✅, ❌}                                                                                                                                    |
-| Institutional         | {✅, ❌}                                                                                                                                    |
-| Management            | {✅, ❌}                                                                                                                                    |
+| Field         | Possible Data Values                                                                                                                        |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Title         | Free text                                                                                                                                   |
+| Author        | Free text                                                                                                                                   |
+| Challenge     | {Autocratization, Disasters, Lack of Trust, Malfunctions, Malicious Online Actions, Malpractices, Marginalization, Violence, Uncategorized} |
+| Capacity      | {Assessment, Knowledge, Training}                                                                                                           |
+| Prevention    | {✅, ❌}                                                                                                                                    |
+| Resilience    | {✅, ❌}                                                                                                                                    |
+| Recovery      | {✅, ❌}                                                                                                                                    |
+| Gender        | {✅, ❌}                                                                                                                                    |
+| Legal         | {✅, ❌}                                                                                                                                    |
+| Institutional | {✅, ❌}                                                                                                                                    |
+| Management    | {✅, ❌}                                                                                                                                    |
 
-Adding a new value to `challenge` or `type` is straightforward. A new `<option>` needs to be added to the relevant group at the top of index.html, in the form:
+Adding a new value to `challenge` or `capacity` is straightforward. A new `<option>` needs to be added to the relevant group at the top of index.html, in the form:
 
     <option value="marginalization">Marginalization</option>
 
@@ -90,7 +90,7 @@ The following formula can be used in Excel or Google Sheets to automatically gen
         </td>
         <td class='author'>"&C2&"</td>
         <td class='challenge'>"&C2&"</td>
-        <td class='type'>"&E2&"</td>
+        <td class='capacity'>"&E2&"</td>
         <td class='prevention'>"&IF(E2="Yes","✅","❌")&"</td>
         <td class='resilience'>"&IF(F2="Yes","✅","❌")&"</td>
         <td class='recovery'>"&IF(G2="Yes","✅","❌")&"</td>
