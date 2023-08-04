@@ -29,7 +29,7 @@ window.onload = function () {
 };
 
 function filter() {
-  const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams();
 
   let table, tr, td, i;
   table = document.getElementById("table");
