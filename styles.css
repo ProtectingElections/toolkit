@@ -2,11 +2,13 @@
 
 .logo-idea {
   float: left;
-  width: 60%;
+  width: 400px;
+  height: 150px;
 }
 
-.banners img {
-  height: 200px;
+.logo-canada {
+  height: 150px;
+  width: 250px;
 }
 
 h1 {
